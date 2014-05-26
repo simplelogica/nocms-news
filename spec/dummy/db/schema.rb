@@ -14,14 +14,14 @@
 ActiveRecord::Schema.define(version: 20140526144605) do
 
   create_table "no_cms_news_item_translations", force: true do |t|
-    t.integer "no_cms_news_items_id"
+    t.integer "no_cms_news_item_id"
     t.string  "locale"
     t.string  "title"
     t.string  "slug"
     t.text    "body"
   end
 
-  add_index "no_cms_news_item_translations", ["no_cms_news_items_id"], name: "index_no_cms_news_item_translations_on_no_cms_news_items_id"
+  add_index "no_cms_news_item_translations", ["no_cms_news_item_id"], name: "index_no_cms_news_item_translations_on_no_cms_news_item_id"
 
   create_table "no_cms_news_items", force: true do |t|
     t.datetime "created_at"
