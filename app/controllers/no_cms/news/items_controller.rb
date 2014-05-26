@@ -6,6 +6,10 @@ module NoCms
         @items = Item.includes(:translations)
       end
 
+      def show
+        @item = Item.find params[:id]
+      end
+
     end
   end
 end

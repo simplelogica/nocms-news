@@ -1,0 +1,6 @@
+en:
+  no_cms:
+    news:
+      items:
+        item:
+          read_more: Read more about %{title}
