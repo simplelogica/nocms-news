@@ -6,7 +6,7 @@ class CreateNoCmsItems < ActiveRecord::Migration
     end
 
     create_table :no_cms_news_item_translations do |t|
-      t.belongs_to :no_cms_news_items, index: true
+      t.belongs_to :no_cms_news_item, index: true
       t.string :locale
       t.string :title
       t.string :slug
