@@ -12,3 +12,9 @@ gemspec
 
 # To use debugger
 # gem 'debugger'
+
+group :test do
+  gem 'faker'
+  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'factory_girl'
+end
