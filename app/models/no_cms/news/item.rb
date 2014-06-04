@@ -1,7 +1,7 @@
 module NoCms::News
   class Item < ActiveRecord::Base
 
-    translates :title, :slug, :body, :draft
+    translates :title, :slug, :body, :draft, :published_at
 
     extend FriendlyId
     friendly_id :title, use: [:globalize]
