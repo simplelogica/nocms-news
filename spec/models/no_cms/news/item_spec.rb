@@ -38,4 +38,39 @@ describe NoCms::News::Item do
     end
 
   end
+
+  context "when unpublishing" do
+    subject { item }
+
+    context "a new item" do
+      let(:item) { create :nocms_news_item, draft: true }
+
+      it("should not have publish date") { expect(item.published_at).to be_nil }
+    end
+
+    context "a new item with a publish_date" do
+      let(:publish_date) { 7.days.ago }
+      let(:item) { create :nocms_news_item, published_at: publish_date }
+
+      it("should publish in the publish date") { expect(item.published_at).to eq publish_date }
+    end
+
+    context "an existing item" do
+      let(:item) { create :nocms_news_item }
+
+      before { item.update_attributes draft: true }
+
+      it("should publish now") { expect(item.published_at).to be_nil }
+    end
+
+    context "an existing item with a publish_date" do
+      let(:publish_date) { 7.days.ago }
+      let(:item) { create :nocms_news_item }
+
+      before { item.update_attributes draft: true, published_at: publish_date }
+
+      it("should publish in the publish date") { expect(item.published_at).to eq publish_date }
+    end
+
+  end
 end
