@@ -4,5 +4,6 @@ FactoryGirl.define do
   factory :nocms_news_item, class: NoCms::News::Item do
     title { Faker::Lorem.sentence }
     body { Faker::Lorem.paragraph }
+    draft false
   end
 end
