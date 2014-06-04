@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140526144605) do
+ActiveRecord::Schema.define(version: 20140604142833) do
 
   create_table "no_cms_news_item_translations", force: true do |t|
     t.integer "no_cms_news_item_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140526144605) do
     t.string  "title"
     t.string  "slug"
     t.text    "body"
+    t.boolean "draft",               default: false
   end
 
   add_index "no_cms_news_item_translations", ["no_cms_news_item_id"], name: "index_no_cms_news_item_translations_on_no_cms_news_item_id"
