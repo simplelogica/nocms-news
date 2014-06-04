@@ -7,6 +7,11 @@ module NoCms::News
     friendly_id :title, use: [:globalize]
     include Concerns::GlobalizeSlugs
 
+    include Concerns::TranslationScopes
+
+    scope :drafts, ->() { where_with_locale(draft: true) }
+    scope :no_drafts, ->() { where_with_locale(draft: false) }
+
     validates :title, :body, presence: true
   end
 end

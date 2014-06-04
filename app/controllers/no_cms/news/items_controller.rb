@@ -3,7 +3,7 @@ module NoCms
     class ItemsController < ApplicationController
 
       def index
-        @items = Item.includes(:translations)
+        @items = Item.includes(:translations).no_drafts
       end
 
       def show
