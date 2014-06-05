@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.add_dependency "globalize", '~> 4.0', '>= 4.0.0'
   s.add_dependency "friendly_id", '~> 5.0', '>= 5.0.0'
   s.add_dependency "friendly_id-globalize", '~> 1.0.0.alpha', '>= 1.0.0.alpha.1'
+  s.add_dependency "kaminari", '~> 0.15', '>= 0.15.1'
 
   s.add_development_dependency "sqlite3"
 end
