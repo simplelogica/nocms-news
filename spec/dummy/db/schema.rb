@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140604144904) do
+ActiveRecord::Schema.define(version: 20140623112914) do
+
+  create_table "no_cms_news_categories", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "no_cms_news_category_translations", force: true do |t|
+    t.integer "no_cms_news_category_id"
+    t.string  "locale"
+    t.string  "title"
+  end
+
+  add_index "no_cms_news_category_translations", ["no_cms_news_category_id"], name: "index_no_cms_news_category_translations_on_category_id"
 
   create_table "no_cms_news_item_translations", force: true do |t|
     t.integer  "no_cms_news_item_id"
