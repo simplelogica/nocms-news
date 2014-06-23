@@ -23,6 +23,8 @@ module NoCms::News
 
     include Concerns::TranslationScopes
 
+    has_and_belongs_to_many :categories
+
     scope :drafts, ->() { where_with_locale(draft: true) }
     scope :no_drafts, ->() { where_with_locale(draft: false) }
 
