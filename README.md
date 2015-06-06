@@ -1,4 +1,4 @@
-# NoCMS Job Offers
+# NoCMS News
 
 ## What's this?
 
