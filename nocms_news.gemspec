@@ -7,6 +7,7 @@ require "no_cms/news/version"
 Gem::Specification.new do |s|
   s.name        = "nocms-news"
   s.version     = NoCms::News::VERSION
+  s.authors     = ["Simplelogica"]
   s.email       = ["gems@simplelogica.net"]
   s.homepage    = "https://github.com/simplelogica/nocms-news"
   s.summary     = "Gem with news functionality independent from any CMS and embeddable in any Rails 4 app"
